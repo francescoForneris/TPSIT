@@ -1,10 +1,14 @@
 from socket import AF_INET, SOCK_DGRAM, socket
+from Server import PORT
 
+utente = str(input("Inserire il nome utente:"))
+indirizzo = input ("Inserire il tuo indirizzo:")
 def chatClient():
     with socket(AF_INET, SOCK_DGRAM) as s:
-        message = 'forne'
+        mes = input("chat: ")
+        message= utente+":"+mes
         message = message.encode('utf8')
-        s.sendto(message,("192.168.95.255",5000))
+        s.sendto(message,(indirizzo,PORT))
 
 
 if __name__ == "__main__":

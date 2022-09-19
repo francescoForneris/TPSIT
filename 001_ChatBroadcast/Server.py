@@ -1,10 +1,10 @@
 from socket import AF_INET, SOCK_DGRAM, socket
 
 BUFFER_SIZE = 1024
-# mystr= "ciao" stringa in python
-
 HOST = "0.0.0.0"
-PORT = 5000
+PORT = int(input("Inserisci la porta:"))
+
+
 exit = True
 # possibilità
 # localhost 127.0.0.1 
